@@ -34,7 +34,8 @@ RUN if [ ! -z "${CONTAINER_TIMEZONE}" ]; \
 
 # fix python dependencies (LTS Django)
 RUN python -m pip install --upgrade pip && \
-  pip install django==1.11.12
+  pip install django==1.11.12 && \
+  pip install whitenoise=3.3.1
 
 ARG version=1.1.3
 ARG whisper_version=${version}
